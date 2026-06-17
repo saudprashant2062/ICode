@@ -1,3 +1,10 @@
-export default function Register() {
-  return <h1>Register Page</h1>;
+import Navbar from "../components/Navbar";
+
+export default function Login() {
+  return (
+    <>
+      <Navbar title="ICode" />
+      <h1>Register Page</h1>
+    </>
+  );
 }
