@@ -29,5 +29,4 @@ dist-ssr
 .env.test.local
 .env.production.local
 .envrc
-
-.docx
+.envrc.local
