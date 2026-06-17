@@ -1,5 +1,6 @@
-import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Section from "../components/Section";
 export default function Landing() {
   return (
     <>
@@ -20,11 +21,29 @@ export default function Landing() {
 </Link>
 </div>
 </main>
-<section className="max-w-4xl mx-auto p-8">
+<Section>
   <h2 className="text-3xl font-bold">
     Why ICode?
   </h2>
-</section>
+
+  <p className="text-lg">
+    ICode allows developers to write, run, and manage code projects directly from the browser without any setup.
+  </p>
+
+  <div className="grid grid-cols-3 gap-6 mt-8">
+    <div className="border p-4 rounded">
+      Write Code
+    </div>
+
+    <div className="border p-4 rounded">
+      Run Code
+    </div>
+
+    <div className="border p-4 rounded">
+      Save Projects
+    </div>
+  </div>
+</Section>
     </>
   );
 }
