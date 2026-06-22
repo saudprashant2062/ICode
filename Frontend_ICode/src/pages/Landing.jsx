@@ -31,9 +31,15 @@ export default function Landing() {
   </p>
 
   <div className="grid grid-cols-3 gap-6 mt-8">
-    <div className="border p-4 rounded">
-      Write Code
-    </div>
+<div className="border p-4 rounded">
+  <h3 className="font-bold text-xl">
+    Write Code
+  </h3>
+
+  <p className="mt-2">
+    Write code directly in your browser without any setup.
+  </p>
+</div>
 
     <div className="border p-4 rounded">
       Run Code
