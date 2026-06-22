@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
+import FeatureCard from "../components/FeatureCard";
 export default function Landing() {
   
   const features = [
@@ -21,6 +22,7 @@ export default function Landing() {
     <>
       <Navbar title="ICode" />
       <main className="max-w-4xl mx-auto p-8 mt-32">
+
   <div className="space-y-6 max-w-2xl">
   <h1 className="text-5xl font-bold">
     Code Anywhere. Run Anywhere.
@@ -47,15 +49,10 @@ export default function Landing() {
 
   <div className="grid grid-cols-3 gap-6 mt-8">
     {features.map((feature) => (
-      <div className="border p-4 rounded" key={feature.title}>
-
-        <h3 className="font-bold text-xl">
-          {feature.title}
-        </h3>
-        <p className="mt-2 text-gray-600">
-          {feature.description}
-        </p>
-        </div>
+        <FeatureCard
+        key={feature.title} 
+        title={feature.title}
+         description={feature.description} />
 
     ))}
 
