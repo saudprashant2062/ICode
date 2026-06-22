@@ -46,25 +46,22 @@ export default function Landing() {
   </p>
 
   <div className="grid grid-cols-3 gap-6 mt-8">
-<div className="border p-4 rounded">
-  <h3 className="font-bold text-xl">
-    Write Code
-  </h3>
+    {features.map((feature) => (
+      <div className="border p-4 rounded" key={feature.title}>
 
-  <p className="mt-2">
-    Write code directly in your browser without any setup.
-  </p>
-</div>
+        <h3 className="font-bold text-xl">
+          {feature.title}
+        </h3>
+        <p className="mt-2 text-gray-600">
+          {feature.description}
+        </p>
+        </div>
 
-    <div className="border p-4 rounded">
-      Run Code
-    </div>
+    ))}
 
-    <div className="border p-4 rounded">
-      Save Projects
-    </div>
   </div>
 </Section>
     </>
   );
 }
+
