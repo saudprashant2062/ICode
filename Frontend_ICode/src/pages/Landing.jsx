@@ -2,6 +2,21 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Section from "../components/Section";
 export default function Landing() {
+  
+  const features = [
+    {
+      title: "Write Code",
+      description: "Write code directly in your browser without any setup."
+    },
+    {
+      title: "Run Code",
+      description: "Run your code instantly without any configuration."
+    },
+    {
+      title: "Save Projects",
+      description: "Save your code projects and access them from anywhere."
+    }
+  ] 
   return (
     <>
       <Navbar title="ICode" />
