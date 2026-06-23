@@ -30,7 +30,7 @@ export default function Login() {
       <Navbar title="ICode" />
       <Section>
         <div className="max-w-md mx-auto mt-10">
-          <div className="border border-green-500/30 bg-black p-8">
+          <div className="border border-green-500/15 bg-black p-8">
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white">Welcome Back</h2>
               <p className="text-gray-600 mt-1">Sign in to your ICode account</p>
@@ -45,7 +45,7 @@ export default function Login() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 text-white placeholder-gray-600 focus:border-green-500 focus:outline-none transition-all duration-200"
+                  className="w-full px-4 py-2.5 bg-gray-900 border border-green-500/10 text-white placeholder-gray-600 focus:border-green-500/40 focus:outline-none transition-all duration-200"
                 />
                 {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
               </div>
@@ -58,7 +58,7 @@ export default function Login() {
                   value={form.password}
                   onChange={handleChange}
                   placeholder="********"
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 text-white placeholder-gray-600 focus:border-green-500 focus:outline-none transition-all duration-200"
+                  className="w-full px-4 py-2.5 bg-gray-900 border border-green-500/10 text-white placeholder-gray-600 focus:border-green-500/40 focus:outline-none transition-all duration-200"
                 />
                 {errors.password && <p className="text-red-400 text-xs mt-1">{errors.password}</p>}
               </div>

@@ -15,10 +15,10 @@ export default function Editor() {
   };
 
   return (
-    <div className="h-screen flex flex-col bg-gray-800">
-      <nav className="border-b border-green-500/15 px-4 py-2 flex items-center justify-between bg-gray-800 shrink-0">
+    <div className="h-screen flex flex-col" style={{ backgroundColor: '#111118' }}>
+      <nav className="border-b px-4 py-2 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-4">
-          <Link to="/dashboard" className="text-green-400 hover:text-green-500 transition-colors">
+          <Link to="/dashboard" className="text-green-400/70 hover:text-green-400 transition-colors">
             &lt;- Dashboard
           </Link>
           <div className="flex items-center gap-1">
@@ -36,8 +36,8 @@ export default function Editor() {
       </nav>
 
       <div className="flex flex-1 overflow-hidden">
-        <aside className="w-56 border-r border-green-500/15 bg-black/30 flex flex-col shrink-0">
-          <div className="px-4 py-3 border-b border-green-500/10 text-xs text-gray-600 uppercase font-bold">
+        <aside className="w-56 border-r flex flex-col shrink-0" style={{ borderColor: 'rgba(61, 220, 132, 0.12)', backgroundColor: 'rgba(10, 10, 15, 0.3)' }}>
+          <div className="px-4 py-3 border-b text-xs text-gray-600 uppercase font-bold" style={{ borderColor: 'rgba(61, 220, 132, 0.08)' }}>
             Files
           </div>
           {files.map((file) => (
@@ -46,8 +46,8 @@ export default function Editor() {
               onClick={() => setActiveFile(file.name)}
               className={`flex items-center gap-2 px-4 py-2 text-sm text-left transition-all duration-200 ${
                 activeFile === file.name
-                  ? "bg-green-500/10 text-green-400 border-l-2 border-green-400"
-                  : "text-gray-600 hover:text-gray-700 hover:bg-green-500/5"
+                  ? "text-green-400 border-l-2 border-green-400" + " bg-green-500/10"
+                  : "text-gray-600 hover:bg-green-500/5"
               }`}
             >
               <span>{file.name}</span>
@@ -68,13 +68,13 @@ export default function Editor() {
             <span className="text-white">greeting</span>
             <span className="text-gray-600">);</span>
             <br />
-            <span className="text-gray-600 mt-2 block border-t border-green-500/10 pt-2 text-xs">
+            <span className="text-gray-600 mt-2 block border-t pt-2 text-xs" style={{ borderColor: 'rgba(61, 220, 132, 0.08)' }}>
               Line 3, Col 1
             </span>
           </div>
 
-          <div className="h-40 border-t border-green-500/15 bg-black/50 flex flex-col">
-            <div className="flex items-center justify-between px-4 py-1.5 border-b border-green-500/10">
+          <div className="h-40 border-t flex flex-col" style={{ borderColor: 'rgba(61, 220, 132, 0.12)', backgroundColor: 'rgba(10, 10, 15, 0.5)' }}>
+            <div className="flex items-center justify-between px-4 py-1.5 border-b" style={{ borderColor: 'rgba(61, 220, 132, 0.08)' }}>
               <span className="text-xs text-gray-600">Console</span>
               <button
                 onClick={() => setOutput("> Console ready...\n")}

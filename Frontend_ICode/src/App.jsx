@@ -8,14 +8,14 @@ import Editor from "./pages/Editor";
 
 function NotFound() {
   return (
-    <div className="min-h-screen bg-gray-800 flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#111118' }}>
       <div className="text-center space-y-4">
         <div className="text-6xl text-green-400 font-bold">404</div>
         <h1 className="text-2xl text-white">Page Not Found</h1>
         <p className="text-gray-600">The page you&apos;re looking for doesn&apos;t exist.</p>
         <Link
           to="/"
-          className="inline-block px-6 py-2.5 bg-black text-white border border-green-500 rounded-2xl font-semibold hover:shadow-[0_0_15px_rgba(0,255,65,0.3)] hover:bg-green-500 transition-all duration-300"
+          className="inline-block px-6 py-2.5 bg-black text-white border border-green-500 font-semibold hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
         >
           Go Home
         </Link>

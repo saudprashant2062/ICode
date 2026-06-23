@@ -25,30 +25,30 @@ export default function Landing() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-800">
+      <div className="min-h-screen" style={{ backgroundColor: '#111118' }}>
         <Navbar title="ICode" />
 
         <main className="max-w-5xl mx-auto px-8 pt-16 pb-0">
           <div className="space-y-6 max-w-3xl">
-            <div className="inline-block px-4 py-1 border border-green-500 text-sm text-green-400">
+            <div className="inline-block px-4 py-1 border border-green-500/30 text-sm text-green-400">
               Browser-Based IDE
             </div>
             <h1 className="text-5xl font-bold text-white leading-tight">
               Code <span className="text-green-400">Anywhere</span>, Run <span className="text-green-400">Anywhere</span>
             </h1>
-            <p className="text-lg text-gray-600 max-w-xl">
+            <p className="text-lg max-w-xl">
               Write, run, and save code directly from your browser -- no setup, no config, just pure coding.
             </p>
             <div className="flex gap-4">
               <Link
                 to="/register"
-                className="px-8 py-3 bg-black text-white border border-green-500 font-semibold hover:bg-green-500 transition-all duration-200"
+                className="px-8 py-3 bg-green-500 text-black font-semibold hover:bg-green-400 transition-all duration-200"
               >
                 Start Coding
               </Link>
               <Link
                 to="/login"
-                className="px-8 py-3 bg-transparent text-green-400 border border-green-500 font-semibold hover:bg-green-500 hover:text-black transition-all duration-200"
+                className="px-8 py-3 bg-black text-green-400 border border-green-500 font-semibold hover:bg-green-500/15 transition-all duration-200"
               >
                 Sign In
               </Link>

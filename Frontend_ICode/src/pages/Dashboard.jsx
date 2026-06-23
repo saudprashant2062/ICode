@@ -11,8 +11,8 @@ export default function Dashboard() {
   const [projects] = useState(initialProjects);
 
   return (
-    <div className="min-h-screen bg-gray-800">
-      <nav className="border-b border-green-500/15 px-6 py-3 flex justify-between items-center bg-gray-800">
+    <div className="min-h-screen" style={{ backgroundColor: '#111118' }}>
+      <nav className="border-b px-6 py-3 flex justify-between items-center">
         <div className="flex items-center gap-1">
           <span className="text-green-400 font-bold">{'{'}</span>
           <h1 className="text-2xl font-bold text-green-400 font-mono">ICode</h1>
@@ -20,7 +20,7 @@ export default function Dashboard() {
         </div>
         <div className="flex items-center gap-4">
           <span className="text-sm text-gray-600">admin@icode.dev</span>
-          <div className="w-8 h-8 bg-green-500/20 border border-green-500/50 flex items-center justify-center text-green-400 text-sm font-bold">
+          <div className="w-8 h-8 bg-green-500/10 border border-green-500/30 flex items-center justify-center text-green-400 text-sm font-bold">
             A
           </div>
         </div>
@@ -45,10 +45,10 @@ export default function Dashboard() {
             <Link
               key={project.id}
               to="/editor"
-              className="border border-green-500/20 bg-black p-5 hover:border-green-500 transition-all duration-200"
+              className="border border-green-500/10 bg-black p-5 hover:bg-green-500/5 transition-all duration-200"
             >
               <div className="flex items-start justify-between mb-4">
-                <span className="text-xs px-2 py-0.5 border border-green-500/20 text-green-400">
+                <span className="text-xs px-2 py-0.5 border border-green-500/20 text-green-400/80">
                   {project.language}
                 </span>
               </div>
