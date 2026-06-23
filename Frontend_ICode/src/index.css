@@ -8,7 +8,6 @@
   --color-green-400: #00ff41;
   --color-green-500: #00cc33;
   --color-black: #050510;
-  --color-white: #e0e0e8;
 }
 
 *::-webkit-scrollbar {
@@ -59,7 +58,6 @@ body::after {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #00ff41;
   font-family: "Fira Code", "Consolas", "Courier New", monospace;
   font-weight: 500;
   letter-spacing: -0.02em;
@@ -86,7 +84,7 @@ a, button, .border {
 }
 
 .text-green-400 {
-  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6), 0 0 20px rgba(0, 255, 65, 0.3);
+  text-shadow: none;
 }
 
 .bg-green-500 {
@@ -106,11 +104,6 @@ a, button, .border {
   background: rgba(0, 255, 65, 0.05);
 }
 
-
-.bg-black:hover {
-  background-color: #00ff41;
-  color: #050510;
-}
 
 nav {
   border-color: rgba(0, 255, 65, 0.15) !important;
