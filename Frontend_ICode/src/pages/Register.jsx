@@ -33,11 +33,8 @@ export default function Register() {
       <Navbar title="ICode" />
       <Section>
         <div className="max-w-md mx-auto mt-10">
-          <div className="border border-green-500/30 rounded-2xl bg-black p-8 hover:shadow-[0_0_30px_rgba(0,255,65,0.1)] transition-all duration-300">
+          <div className="border border-green-500/30 bg-black p-8">
             <div className="text-center mb-8">
-              <div className="w-14 h-14 rounded-xl border border-green-500/30 flex items-center justify-center text-green-400 text-2xl mx-auto mb-4">
-                {'</>'}
-              </div>
               <h2 className="text-2xl font-bold text-white">Create Account</h2>
               <p className="text-gray-600 mt-1">Join the ICode community</p>
             </div>
@@ -51,7 +48,7 @@ export default function Register() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 rounded-xl text-white placeholder-gray-600 focus:border-green-500 focus:outline-none focus:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all duration-300"
+                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 text-white placeholder-gray-600 focus:border-green-500 focus:outline-none transition-all duration-200"
                 />
                 {errors.name && <p className="text-red-400 text-xs mt-1">{errors.name}</p>}
               </div>
@@ -64,7 +61,7 @@ export default function Register() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="you@example.com"
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 rounded-xl text-white placeholder-gray-600 focus:border-green-500 focus:outline-none focus:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all duration-300"
+                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 text-white placeholder-gray-600 focus:border-green-500 focus:outline-none transition-all duration-200"
                 />
                 {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
               </div>
@@ -76,8 +73,8 @@ export default function Register() {
                   name="password"
                   value={form.password}
                   onChange={handleChange}
-                  placeholder="••••••••"
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 rounded-xl text-white placeholder-gray-600 focus:border-green-500 focus:outline-none focus:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all duration-300"
+                  placeholder="********"
+                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 text-white placeholder-gray-600 focus:border-green-500 focus:outline-none transition-all duration-200"
                 />
                 {errors.password && <p className="text-red-400 text-xs mt-1">{errors.password}</p>}
               </div>
@@ -89,15 +86,15 @@ export default function Register() {
                   name="confirmPassword"
                   value={form.confirmPassword}
                   onChange={handleChange}
-                  placeholder="••••••••"
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 rounded-xl text-white placeholder-gray-600 focus:border-green-500 focus:outline-none focus:shadow-[0_0_10px_rgba(0,255,65,0.1)] transition-all duration-300"
+                  placeholder="********"
+                  className="w-full px-4 py-2.5 bg-gray-800 border border-green-500/20 text-white placeholder-gray-600 focus:border-green-500 focus:outline-none transition-all duration-200"
                 />
                 {errors.confirmPassword && <p className="text-red-400 text-xs mt-1">{errors.confirmPassword}</p>}
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 bg-green-500 text-black font-bold rounded-xl hover:bg-green-400 hover:shadow-[0_0_20px_rgba(0,255,65,0.3)] transition-all duration-300"
+                className="w-full py-3 bg-green-500 text-black font-bold hover:bg-green-400 transition-all duration-200"
               >
                 Create Account
               </button>

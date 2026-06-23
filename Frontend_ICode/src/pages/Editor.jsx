@@ -3,9 +3,9 @@ import { useState } from "react";
 
 export default function Editor() {
   const [files] = useState([
-    { name: "index.html", icon: "🌐" },
-    { name: "style.css", icon: "🎨" },
-    { name: "app.js", icon: "⚡" },
+    { name: "index.html" },
+    { name: "style.css" },
+    { name: "app.js" },
   ]);
   const [activeFile, setActiveFile] = useState("app.js");
   const [output, setOutput] = useState("> Console ready...\n");
@@ -16,12 +16,12 @@ export default function Editor() {
 
   return (
     <div className="h-screen flex flex-col bg-gray-800">
-      <nav className="border-b border-green-500/15 px-4 py-2 flex items-center justify-between bg-gray-800/95 shrink-0">
+      <nav className="border-b border-green-500/15 px-4 py-2 flex items-center justify-between bg-gray-800 shrink-0">
         <div className="flex items-center gap-4">
           <Link to="/dashboard" className="text-green-400 hover:text-green-500 transition-colors">
-            ← Dashboard
+            &lt;- Dashboard
           </Link>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <span className="text-green-400 font-bold">{'{'}</span>
             <h1 className="text-lg font-bold text-green-400 font-mono">ICode</h1>
             <span className="text-green-400 font-bold">{'}'}</span>
@@ -29,15 +29,15 @@ export default function Editor() {
         </div>
         <button
           onClick={runCode}
-          className="px-5 py-1.5 bg-green-500 text-black font-bold rounded-xl text-sm hover:bg-green-400 hover:shadow-[0_0_15px_rgba(0,255,65,0.3)] transition-all duration-300"
+          className="px-5 py-1.5 bg-green-500 text-black font-bold text-sm hover:bg-green-400 transition-all duration-200"
         >
-          ▶ Run
+          Run
         </button>
       </nav>
 
       <div className="flex flex-1 overflow-hidden">
         <aside className="w-56 border-r border-green-500/15 bg-black/30 flex flex-col shrink-0">
-          <div className="px-4 py-3 border-b border-green-500/10 text-xs text-gray-600 uppercase tracking-wider font-bold">
+          <div className="px-4 py-3 border-b border-green-500/10 text-xs text-gray-600 uppercase font-bold">
             Files
           </div>
           {files.map((file) => (
@@ -50,7 +50,6 @@ export default function Editor() {
                   : "text-gray-600 hover:text-gray-700 hover:bg-green-500/5"
               }`}
             >
-              <span>{file.icon}</span>
               <span>{file.name}</span>
             </button>
           ))}

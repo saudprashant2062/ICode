@@ -12,15 +12,15 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-gray-800">
-      <nav className="border-b border-green-500/15 px-6 py-3 flex justify-between items-center bg-gray-800/95 backdrop-blur-4">
-        <div className="flex items-center gap-2">
-          <span className="text-green-400 font-bold text-xl">{'{'}</span>
+      <nav className="border-b border-green-500/15 px-6 py-3 flex justify-between items-center bg-gray-800">
+        <div className="flex items-center gap-1">
+          <span className="text-green-400 font-bold">{'{'}</span>
           <h1 className="text-2xl font-bold text-green-400 font-mono">ICode</h1>
-          <span className="text-green-400 font-bold text-xl">{'}'}</span>
+          <span className="text-green-400 font-bold">{'}'}</span>
         </div>
         <div className="flex items-center gap-4">
           <span className="text-sm text-gray-600">admin@icode.dev</span>
-          <div className="w-8 h-8 rounded-full bg-green-500/20 border border-green-500/50 flex items-center justify-center text-green-400 text-sm font-bold">
+          <div className="w-8 h-8 bg-green-500/20 border border-green-500/50 flex items-center justify-center text-green-400 text-sm font-bold">
             A
           </div>
         </div>
@@ -34,28 +34,25 @@ export default function Dashboard() {
           </div>
           <Link
             to="/editor"
-            className="px-6 py-2.5 bg-green-500 text-black font-bold rounded-xl hover:bg-green-400 hover:shadow-[0_0_20px_rgba(0,255,65,0.3)] transition-all duration-300"
+            className="px-6 py-2.5 bg-green-500 text-black font-bold hover:bg-green-400 transition-all duration-200"
           >
-            + New Project
+            New Project
           </Link>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project, i) => (
+          {projects.map((project) => (
             <Link
               key={project.id}
               to="/editor"
-              className="group border border-green-500/20 rounded-2xl bg-black p-5 hover:border-green-500 hover:shadow-[0_0_20px_rgba(0,255,65,0.1)] transition-all duration-300 hover:-translate-y-1"
+              className="border border-green-500/20 bg-black p-5 hover:border-green-500 transition-all duration-200"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-10 h-10 rounded-lg border border-green-500/30 flex items-center justify-center text-green-400 group-hover:border-green-400 group-hover:shadow-[0_0_10px_rgba(0,255,65,0.2)] transition-all duration-300">
-                  {'</>'}
-                </div>
-                <span className="text-xs px-2 py-0.5 rounded-full border border-green-500/20 text-green-400">
+                <span className="text-xs px-2 py-0.5 border border-green-500/20 text-green-400">
                   {project.language}
                 </span>
               </div>
-              <h3 className="font-bold text-lg text-white group-hover:text-green-400 transition-colors">{project.name}</h3>
+              <h3 className="font-bold text-lg text-white">{project.name}</h3>
               <p className="text-xs text-gray-600 mt-2">Modified {project.lastModified}</p>
             </Link>
           ))}
