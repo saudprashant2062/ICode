@@ -1,10 +1,28 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Editor from "./pages/Editor";
+
+function NotFound() {
+  return (
+    <div className="min-h-screen bg-gray-800 flex items-center justify-center">
+      <div className="text-center space-y-4">
+        <div className="text-6xl text-green-400 font-bold">404</div>
+        <h1 className="text-2xl text-white">Page Not Found</h1>
+        <p className="text-gray-600">The page you&apos;re looking for doesn&apos;t exist.</p>
+        <Link
+          to="/"
+          className="inline-block px-6 py-2.5 bg-black text-white border border-green-500 rounded-2xl font-semibold hover:shadow-[0_0_15px_rgba(0,255,65,0.3)] hover:bg-green-500 transition-all duration-300"
+        >
+          Go Home
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
@@ -15,6 +33,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/editor" element={<Editor />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
