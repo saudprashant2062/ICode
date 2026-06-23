@@ -1,1 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --color-gray-800: #0c0c14;
+  --color-gray-700: #c0c0d0;
+  --color-gray-600: #a0a0b0;
+  --color-green-400: #00ff41;
+  --color-green-500: #00cc33;
+  --color-black: #050510;
+  --color-white: #e0e0e8;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: #0c0c14;
+}
+*::-webkit-scrollbar-thumb {
+  background: #00ff41;
+  border-radius: 3px;
+}
+
+html {
+  scrollbar-color: #00ff41 #0c0c14;
+  scrollbar-width: thin;
+}
+
+body {
+  background-color: #0c0c14;
+  color: #c0c0d0;
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-weight: 400;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 255, 65, 0.025) 2px,
+      rgba(0, 255, 65, 0.025) 4px
+    ),
+    radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, 0.4) 100%);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+::selection {
+  background: rgba(0, 255, 65, 0.3);
+  color: #e0e0e8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #00ff41;
+  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.text-5xl {
+  font-size: 2.5rem !important;
+}
+
+.text-3xl {
+  font-size: 1.6rem !important;
+}
+
+.text-xl {
+  font-size: 1.1rem !important;
+}
+
+.text-lg {
+  font-size: 0.9rem !important;
+}
+
+a, button, .border {
+  transition: all 0.3s ease;
+}
+
+.text-green-400 {
+  text-shadow: 0 0 8px rgba(0, 255, 65, 0.6), 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.bg-green-500 {
+  box-shadow: none;
+}
+
+.bg-green-500:hover {
+  background-color: #00ff41;
+}
+
+.border:not(nav) {
+  border-color: rgba(0, 255, 65, 0.25) !important;
+}
+
+.border:not(nav):hover {
+  border-color: #00ff41 !important;
+  background: rgba(0, 255, 65, 0.05);
+}
+
+.bg-black {
+}
+
+.bg-black:hover {
+  background-color: #00ff41;
+  color: #050510;
+}
+
+nav {
+  border-color: rgba(0, 255, 65, 0.15) !important;
+  background: rgba(12, 12, 20, 0.95);
+  backdrop-filter: blur(4px);
+}
+
+p {
+  color: #a0a0b0;
+}
