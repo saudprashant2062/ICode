@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
@@ -7,7 +8,7 @@ export default function Login() {
       <main className="min-h-screen flex items-center justify-center bg-gray-800 px-4">
         <div className="w-full max-w-sm border border-green-500/15 bg-black p-8">
           <h1 className="text-3xl font-bold text-white mb-1">Welcome back</h1>
-          <p className="text-gray-600 mb-6">Sign in to your account</p>
+          <p className="text-gray-400 mb-6 text-sm">Sign in to your account</p>
           <form className="flex flex-col gap-4">
             <input
               type="email"
@@ -23,11 +24,14 @@ export default function Login() {
               Sign In
             </button>
           </form>
-          <p className="text-center text-gray-600 mt-6 text-sm">
+          <p className="text-center text-gray-400 mt-6 text-sm">
             Don't have an account?{" "}
-            <a href="/register" className="text-green-400 hover:text-green-300 transition-colors">
+            <Link
+              to="/register"
+              className="text-green-400 hover:text-green-300 transition-colors"
+            >
               Register
-            </a>
+            </Link>
           </p>
         </div>
       </main>
