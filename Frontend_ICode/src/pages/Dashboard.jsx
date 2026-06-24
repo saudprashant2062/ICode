@@ -1,17 +1,14 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
-const initialProjects = [
+const projects = [
   { id: 1, name: "my-app", language: "JavaScript", lastModified: "2 hours ago" },
   { id: 2, name: "api-server", language: "Python", lastModified: "1 day ago" },
   { id: 3, name: "landing-page", language: "HTML/CSS", lastModified: "3 days ago" },
 ];
 
 export default function Dashboard() {
-  const [projects] = useState(initialProjects);
-
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#111118' }}>
+    <div className="min-h-screen bg-gray-800">
       <nav className="border-b px-6 py-3 flex justify-between items-center">
         <div className="flex items-center gap-1">
           <span className="text-green-400 font-bold">{'{'}</span>

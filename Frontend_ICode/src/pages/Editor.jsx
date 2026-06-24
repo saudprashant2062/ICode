@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Editor() {
-  const [files] = useState([
+  const files = [
     { name: "index.html" },
     { name: "style.css" },
     { name: "app.js" },
-  ]);
+  ];
   const [activeFile, setActiveFile] = useState("app.js");
   const [output, setOutput] = useState("> Console ready...\n");
 
@@ -15,7 +15,7 @@ export default function Editor() {
   };
 
   return (
-    <div className="h-screen flex flex-col" style={{ backgroundColor: '#111118' }}>
+    <div className="h-screen flex flex-col bg-gray-800">
       <nav className="border-b px-4 py-2 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-4">
           <Link to="/dashboard" className="text-green-400/70 hover:text-green-400 transition-colors">
@@ -46,7 +46,7 @@ export default function Editor() {
               onClick={() => setActiveFile(file.name)}
               className={`flex items-center gap-2 px-4 py-2 text-sm text-left transition-all duration-200 ${
                 activeFile === file.name
-                  ? "text-green-400 border-l-2 border-green-400" + " bg-green-500/10"
+                  ? "text-green-400 border-l-2 border-green-400 bg-green-500/10"
                   : "text-gray-600 hover:bg-green-500/5"
               }`}
             >

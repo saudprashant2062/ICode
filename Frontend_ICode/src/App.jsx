@@ -8,7 +8,7 @@ import Editor from "./pages/Editor";
 
 function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: '#111118' }}>
+    <div className="min-h-screen flex items-center justify-center bg-gray-800">
       <div className="text-center space-y-4">
         <div className="text-6xl text-green-400 font-bold">404</div>
         <h1 className="text-2xl text-white">Page Not Found</h1>

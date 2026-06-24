@@ -25,7 +25,7 @@ export default function Landing() {
 
   return (
     <>
-      <div className="min-h-screen" style={{ backgroundColor: '#111118' }}>
+      <div className="min-h-screen bg-gray-800">
         <Navbar title="ICode" />
 
         <main className="max-w-5xl mx-auto px-8 pt-16 pb-0">

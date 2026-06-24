@@ -51,19 +51,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-5xl {
-  font-size: 2.5rem !important;
+  font-size: 2.5rem;
 }
 
 .text-3xl {
-  font-size: 1.6rem !important;
+  font-size: 1.6rem;
 }
 
 .text-xl {
-  font-size: 1.1rem !important;
+  font-size: 1.1rem;
 }
 
 .text-lg {
-  font-size: 0.9rem !important;
+  font-size: 0.9rem;
 }
 
 a, button {
@@ -71,7 +71,7 @@ a, button {
 }
 
 nav {
-  border-color: rgba(61, 220, 132, 0.12) !important;
+  border-color: rgba(61, 220, 132, 0.12);
   background: #111118;
 }
 
