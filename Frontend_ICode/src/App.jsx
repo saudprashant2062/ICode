@@ -12,7 +12,7 @@ function NotFound() {
       <div className="text-center space-y-4">
         <div className="text-6xl text-green-400 font-bold">404</div>
         <h1 className="text-2xl text-white">Page Not Found</h1>
-        <p className="text-gray-600">The page you&apos;re looking for doesn&apos;t exist.</p>
+        <p className="text-gray-600">The page you're looking for doesn't exist.</p>
         <Link
           to="/"
           className="inline-block px-6 py-2.5 bg-black text-white border border-green-500 font-semibold hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"

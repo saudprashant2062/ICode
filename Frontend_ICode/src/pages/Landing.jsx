@@ -37,7 +37,7 @@ export default function Landing() {
               Code <span className="text-green-400">Anywhere</span>, Run <span className="text-green-400">Anywhere</span>
             </h1>
             <p className="text-lg max-w-xl">
-              Write, run, and save code directly from your browser -- no setup, no config, just pure coding.
+              Write, run, and save code directly from your browser no setup, no config, just pure coding.
             </p>
             <div className="flex gap-4">
               <Link
