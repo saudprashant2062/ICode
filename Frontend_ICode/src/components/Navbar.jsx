@@ -4,7 +4,7 @@ export default function Navbar({ title }) {
   const location = useLocation();
 
   return (
-    <nav className="border-b px-6 py-3 flex justify-between items-center">
+    <nav className="border-b px-8 py-4 flex justify-between items-center">
       <Link to="/" className="flex items-center gap-1">
         <span className="text-green-400 font-bold">{'{'}</span>
         <h1 className="text-2xl font-bold text-green-400 font-mono">{title}</h1>
