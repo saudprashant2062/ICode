@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Login() {
+  const [email, setEmail] = useState("");
   return (
     <>
       <Navbar title="ICode" />
@@ -13,7 +15,9 @@ export default function Login() {
             <input
               type="email"
               placeholder="Email"
-              className="w-full bg-gray-800 border border-green-500/20 px-4 py-2.5 text-gray-700 placeholder-gray-600 focus:outline-none focus:border-green-400"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full bg-gray-800 border border-green-500/20 px-4 py-2.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400"
             />
             <input
               type="password"
