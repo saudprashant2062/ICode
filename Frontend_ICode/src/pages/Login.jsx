@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+
 export default function Login() {
   const [email, setEmail] = useState("");
   return (
