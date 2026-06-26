@@ -25,7 +25,7 @@ export default function Landing() {
 
   return (
     <>
-      <div className="min-h-screen bg-gray-800 bg-[radial-gradient(ellipse_at_center,rgba(61,220,132,0.06)_0%,transparent_60%)]">
+      <div className="min-h-screen bg-gray-800 bg-[radial-gradient(ellipse_at_center,rgba(61,220,132,0.03)_0%,transparent_60%)]">
         <Navbar title="ICode" />
 
         <main className="max-w-5xl mx-auto px-8 pt-28 pb-24 border-b border-green-500/10">
