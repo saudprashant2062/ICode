@@ -2,13 +2,68 @@
 @import "tailwindcss";
 
 @theme {
-  --color-gray-800: #111118;
-  --color-gray-700: #c0c0d0;
-  --color-gray-600: #888898;
+  --color-gray-900: var(--clr-surface-alt);
+  --color-gray-800: var(--clr-surface);
+  --color-gray-700: var(--clr-text);
+  --color-gray-600: var(--clr-text-secondary);
+  --color-gray-500: var(--clr-placeholder);
+  --color-gray-400: var(--clr-text-muted);
+  --color-gray-300: var(--clr-text);
+  --color-card: var(--clr-card);
+  --color-white: var(--clr-heading);
   --color-green-400: #3ddc84;
   --color-green-500: #2ea85c;
-  --color-black: #0a0a0f;
-  --color-gray-900: #1a1a24;
+}
+
+:root {
+  --clr-surface: #111118;
+  --clr-surface-alt: #1a1a24;
+  --clr-card: #0a0a0f;
+  --clr-heading: #ffffff;
+  --clr-text: #c0c0d0;
+  --clr-text-secondary: #888898;
+  --clr-text-muted: #9ca3af;
+  --clr-placeholder: #6b7280;
+}
+
+[data-theme="light"] {
+  --clr-surface: #f0f0f5;
+  --clr-surface-alt: #e4e4ec;
+  --clr-card: #ffffff;
+  --clr-heading: #1a1a2e;
+  --clr-text: #2d2d3a;
+  --clr-text-secondary: #6b7280;
+  --clr-text-muted: #6b7280;
+  --clr-placeholder: #9ca3af;
+}
+
+[data-theme="light"] body {
+  background-color: #f0f0f5;
+  color: #2d2d3a;
+}
+
+[data-theme="light"] ::selection {
+  background: rgba(61, 220, 132, 0.35);
+  color: #1a1a2e;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #e4e4ec;
+}
+
+[data-theme="light"] html {
+  scrollbar-color: #3ddc84 #e4e4ec;
+}
+
+[data-theme="light"] nav {
+  background: #f0f0f5;
+}
+
+[data-theme="light"] input:-webkit-autofill,
+[data-theme="light"] input:-webkit-autofill:hover,
+[data-theme="light"] input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #2d2d3a;
+  -webkit-box-shadow: 0 0 0px 1000px #f0f0f5 inset;
 }
 
 ::-webkit-scrollbar {
