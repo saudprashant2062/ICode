@@ -16,7 +16,7 @@ function NotFound() {
         <p className="text-gray-600">The page you're looking for doesn't exist.</p>
         <Link
           to="/"
-          className="inline-block px-6 py-2.5 bg-black text-white border border-green-500 font-semibold hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
+          className="inline-block px-6 py-2.5 bg-black text-gray-100 border border-green-500 font-semibold hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
         >
           Go Home
         </Link>

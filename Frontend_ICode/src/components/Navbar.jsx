@@ -15,7 +15,7 @@ export default function Navbar({ title }) {
       <div className="flex gap-3 items-center">
         <button
           onClick={toggleTheme}
-          className="px-3 py-1.5 rounded bg-black text-white border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200 text-sm"
+          className="px-3 py-1.5 rounded bg-black text-gray-100 border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200 text-sm"
           title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
         >
           {theme === "dark" ? "☀" : "☾"}
@@ -23,7 +23,7 @@ export default function Navbar({ title }) {
         {location.pathname !== "/login" && (
           <Link
             to="/login"
-            className="px-4 py-1.5 rounded bg-black text-white border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
+            className="px-4 py-1.5 rounded bg-black text-gray-100 border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
           >
             Login
           </Link>
@@ -31,7 +31,7 @@ export default function Navbar({ title }) {
         {location.pathname !== "/register" && (
           <Link
             to="/register"
-            className="px-4 py-1.5 rounded bg-black text-white border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
+            className="px-4 py-1.5 rounded bg-black text-gray-100 border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
           >
             Register
           </Link>
