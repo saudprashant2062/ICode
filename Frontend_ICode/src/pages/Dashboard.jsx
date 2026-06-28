@@ -9,7 +9,7 @@ const projects = [
 export default function Dashboard() {
   return (
     <div className="min-h-screen bg-gray-800">
-      <nav className="border-b px-6 py-3 flex justify-between items-center">
+      <div className="border-b px-6 py-3 flex justify-between items-center">
         <div className="flex items-center gap-1">
           <span className="text-green-400 font-bold">{'{'}</span>
           <h1 className="text-2xl font-bold text-green-400 font-mono">ICode</h1>
@@ -21,7 +21,7 @@ export default function Dashboard() {
             A
           </div>
         </div>
-      </nav>
+      </div>
 
       <div className="max-w-5xl mx-auto px-8 py-8">
         <div className="flex justify-between items-center mb-8">
@@ -38,19 +38,19 @@ export default function Dashboard() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {projects.map((project) => (
+          {projects.map(({ id, name, language, lastModified }) => (
             <Link
-              key={project.id}
+              key={id}
               to="/editor"
               className="border border-green-500/10 bg-black p-5 hover:bg-green-500/5 transition-all duration-200"
             >
               <div className="flex items-start justify-between mb-4">
                 <span className="text-xs px-2 py-0.5 border border-green-500/20 text-green-400/80">
-                  {project.language}
+                  {language}
                 </span>
               </div>
-              <h3 className="font-bold text-lg text-white">{project.name}</h3>
-              <p className="text-xs text-gray-600 mt-2">Modified {project.lastModified}</p>
+              <h3 className="font-bold text-lg text-white">{name}</h3>
+              <p className="text-xs text-gray-600 mt-2">Modified {lastModified}</p>
             </Link>
           ))}
         </div>

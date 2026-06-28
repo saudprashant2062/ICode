@@ -1,7 +1,19 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function Register() {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert("Registration successful!");
+  }
+
+  const inputClass = "w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400";
+
   return (
     <>
       <Navbar title="ICode" />
@@ -9,21 +21,27 @@ export default function Register() {
         <div className="w-full max-w-sm border border-green-500/25 bg-black p-12 shadow-[0_0_20px_rgba(61,220,132,0.03)]">
           <h1 className="text-4xl font-bold text-white border-b border-green-500/20 pb-3">Create an account</h1>
           <p className="text-gray-400 mt-4 mb-8 border-l-2 border-green-500/15 pl-3">Get started with ICode</p>
-          <form className="flex flex-col gap-4">
+          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Username"
-              className="w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className={inputClass}
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={inputClass}
             />
             <input
               type="password"
               placeholder="Password"
-              className="w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className={inputClass}
             />
             <button className="w-full bg-green-500 text-black font-bold py-3.5 hover:bg-green-400 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-200">
               Create Account

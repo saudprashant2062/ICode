@@ -2,19 +2,13 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  
+
   function handleSubmit(e) {
     e.preventDefault();
-    const loginData = {
-      email,
-        password,
-    }
     alert("Login successful!");
-    console.log(loginData.email, loginData.password);
   }
   return (
     <>
