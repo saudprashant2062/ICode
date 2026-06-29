@@ -11,7 +11,7 @@ const features = [
 ];
 
 const languages = [
-  "JavaScript", "TypeScript", "Python", "Java", "C++",
+  "JavaScript", "Python", "Java", "C",
 ];
 
 const year = new Date().getFullYear();
