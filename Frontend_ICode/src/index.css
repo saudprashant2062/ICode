@@ -35,22 +35,22 @@
 }
 
 [data-theme="light"] {
-  --clr-surface: #c8caba;
-  --clr-surface-alt: #babcaa;
-  --clr-card: #d6d8c8;
-  --clr-heading: #2a2b22;
-  --clr-text: #4e5042;
-  --clr-text-secondary: #787a6a;
-  --clr-text-muted: #787a6a;
-  --clr-placeholder: #989a8a;
-  --bg-body: #c8caba;
-  --bg-nav: #c8caba;
-  --bg-scrollbar: #babcaa;
-  --color-body: #4e5042;
+  --clr-surface: #f5e6c8;
+  --clr-surface-alt: #e8d9b8;
+  --clr-card: #fff0d4;
+  --clr-heading: #3d3020;
+  --clr-text: #5a4a32;
+  --clr-text-secondary: #8a7a62;
+  --clr-text-muted: #8a7a62;
+  --clr-placeholder: #aa9a82;
+  --bg-body: #f5e6c8;
+  --bg-nav: #f5e6c8;
+  --bg-scrollbar: #e8d9b8;
+  --color-body: #5a4a32;
   --selection-bg: rgba(61, 220, 132, 0.35);
-  --selection-color: #2a2b22;
-  --autofill-bg: #c8caba;
-  --autofill-color: #4e5042;
+  --selection-color: #3d3020;
+  --autofill-bg: #f5e6c8;
+  --autofill-color: #5a4a32;
 }
 
 ::-webkit-scrollbar {
