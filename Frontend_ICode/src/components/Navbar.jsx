@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useTheme } from "../context/useTheme";
+import { useTheme } from "../context/ThemeProvider";
 
 export default function Navbar({ title }) {
   const location = useLocation();

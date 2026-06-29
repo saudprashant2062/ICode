@@ -1,5 +1,14 @@
-import { useState, useEffect } from "react";
-import { ThemeContext } from "./ThemeContext";
+import { createContext, useContext, useState, useEffect, useMemo } from "react";
+
+const ThemeContext = createContext(null);
+
+export function useTheme() {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within ThemeProvider");
+  }
+  return context;
+}
 
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
@@ -11,12 +20,13 @@ export function ThemeProvider({ children }) {
     localStorage.setItem("icode-theme", theme);
   }, [theme]);
 
-  function toggleTheme() {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  }
+  const value = useMemo(() => ({
+    theme,
+    toggleTheme: () => setTheme((prev) => (prev === "dark" ? "light" : "dark")),
+  }), [theme]);
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   );
