@@ -1,5 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import { useTheme } from "../context/ThemeProvider";
+import { useTheme } from "../context/useTheme";
+
+const btnClass = "rounded bg-black text-gray-100 border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200";
 
 export default function Navbar({ title }) {
   const location = useLocation();
@@ -15,24 +17,18 @@ export default function Navbar({ title }) {
       <div className="flex gap-3 items-center">
         <button
           onClick={toggleTheme}
-          className="px-3 py-1.5 rounded bg-black text-gray-100 border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200 text-sm"
+          className={`px-3 py-1.5 text-sm ${btnClass}`}
           title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
         >
           {theme === "dark" ? "☀" : "☾"}
         </button>
         {location.pathname !== "/login" && (
-          <Link
-            to="/login"
-            className="px-4 py-1.5 rounded bg-black text-gray-100 border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
-          >
+          <Link to="/login" className={`px-4 py-1.5 ${btnClass}`}>
             Login
           </Link>
         )}
         {location.pathname !== "/register" && (
-          <Link
-            to="/register"
-            className="px-4 py-1.5 rounded bg-black text-gray-100 border border-green-500 hover:bg-green-500/15 hover:text-green-400 transition-all duration-200"
-          >
+          <Link to="/register" className={`px-4 py-1.5 ${btnClass}`}>
             Register
           </Link>
         )}

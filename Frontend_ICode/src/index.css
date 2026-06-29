@@ -24,6 +24,14 @@
   --clr-text-secondary: #888898;
   --clr-text-muted: #9ca3af;
   --clr-placeholder: #6b7280;
+  --bg-body: #111118;
+  --bg-nav: #111118;
+  --bg-scrollbar: #111118;
+  --color-body: #c0c0d0;
+  --selection-bg: rgba(61, 220, 132, 0.25);
+  --selection-color: #e0e0e8;
+  --autofill-bg: #111118;
+  --autofill-color: #c0c0d0;
 }
 
 [data-theme="light"] {
@@ -35,35 +43,14 @@
   --clr-text-secondary: #6b7280;
   --clr-text-muted: #6b7280;
   --clr-placeholder: #9ca3af;
-}
-
-[data-theme="light"] body {
-  background-color: #f0f0f5;
-  color: #2d2d3a;
-}
-
-[data-theme="light"] ::selection {
-  background: rgba(61, 220, 132, 0.35);
-  color: #1a1a2e;
-}
-
-[data-theme="light"] ::-webkit-scrollbar-track {
-  background: #e4e4ec;
-}
-
-[data-theme="light"] html {
-  scrollbar-color: #3ddc84 #e4e4ec;
-}
-
-[data-theme="light"] nav {
-  background: #f0f0f5;
-}
-
-[data-theme="light"] input:-webkit-autofill,
-[data-theme="light"] input:-webkit-autofill:hover,
-[data-theme="light"] input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #2d2d3a;
-  -webkit-box-shadow: 0 0 0px 1000px #f0f0f5 inset;
+  --bg-body: #f0f0f5;
+  --bg-nav: #f0f0f5;
+  --bg-scrollbar: #e4e4ec;
+  --color-body: #2d2d3a;
+  --selection-bg: rgba(61, 220, 132, 0.35);
+  --selection-color: #1a1a2e;
+  --autofill-bg: #f0f0f5;
+  --autofill-color: #2d2d3a;
 }
 
 ::-webkit-scrollbar {
@@ -71,7 +58,7 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #111118;
+  background: var(--bg-scrollbar);
 }
 ::-webkit-scrollbar-thumb {
   background: #3ddc84;
@@ -82,21 +69,21 @@
 }
 
 html {
-  scrollbar-color: #3ddc84 #111118;
+  scrollbar-color: #3ddc84 var(--bg-scrollbar);
   scrollbar-width: thin;
 }
 
 body {
-  background-color: #111118;
-  color: #c0c0d0;
+  background-color: var(--bg-body);
+  color: var(--color-body);
   font-family: "Fira Code", "Consolas", "Courier New", monospace;
   font-weight: 400;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: rgba(61, 220, 132, 0.25);
-  color: #e0e0e8;
+  background: var(--selection-bg);
+  color: var(--selection-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -105,12 +92,12 @@ h1, h2, h3, h4, h5, h6 {
 
 nav {
   border-color: rgba(61, 220, 132, 0.12);
-  background: #111118;
+  background: var(--bg-nav);
 }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
-  -webkit-text-fill-color: #c0c0d0;
-  -webkit-box-shadow: 0 0 0px 1000px #111118 inset;
+  -webkit-text-fill-color: var(--autofill-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--autofill-bg) inset;
 }

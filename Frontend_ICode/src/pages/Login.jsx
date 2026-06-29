@@ -2,6 +2,8 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+const inputClass = "w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,14 +25,14 @@ export default function Login() {
               placeholder="Email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400"
+              className={inputClass}
             />
             <input
               type="password"
               placeholder="Password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400"
+              className={inputClass}
             />
             <button className="w-full bg-green-500 text-black font-bold py-3.5 hover:bg-green-400 hover:shadow-lg hover:shadow-green-500/25 transition-all duration-200">
               Sign In
