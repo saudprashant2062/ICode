@@ -17,7 +17,7 @@ export default function Login() {
     <>
       <Navbar title="ICode" />
       <main className="h-screen overflow-hidden flex items-center justify-center bg-gray-800 bg-[radial-gradient(ellipse_at_center,rgba(61,220,132,0.03)_0%,transparent_60%)] px-4">
-        <div className="w-full max-w-sm border border-green-500/25 bg-card p-12 shadow-[0_0_20px_rgba(61,220,132,0.03)]">
+        <div className="w-full max-w-sm border border-[var(--clr-card-border)] bg-card p-12 shadow-[0_0_20px_rgba(61,220,132,0.03)]">
           <h1 className="text-4xl font-bold text-white border-b border-green-500/20 pb-3">Welcome back</h1>
           <p className="text-gray-400 mt-4 mb-8 border-l-2 border-green-500/15 pl-3">Sign in to your account</p>
           <form className="flex flex-col gap-4" onSubmit={handleSubmit}>

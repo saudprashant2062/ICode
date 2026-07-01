@@ -42,7 +42,7 @@ export default function Dashboard() {
             <Link
               key={id}
               to="/editor"
-              className="border border-green-500/10 bg-card p-5 hover:bg-green-500/5 transition-all duration-200"
+              className="border border-[var(--clr-border-faint)] bg-card p-5 hover:bg-green-500/5 transition-all duration-200"
             >
               <div className="flex items-start justify-between mb-4">
                 <span className="text-xs px-2 py-0.5 border border-green-500/20 text-green-400/80">
