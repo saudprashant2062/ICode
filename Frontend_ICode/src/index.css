@@ -22,6 +22,7 @@
   --clr-card-border: rgba(46, 168, 92, 0.25);
   --clr-card-border-hover: rgba(46, 168, 92, 0.5);
   --clr-border-faint: rgba(46, 168, 92, 0.1);
+  --clr-card-shadow: none;
   --clr-heading: #ffffff;
   --clr-text: #c0c0d0;
   --clr-text-secondary: #888898;
@@ -41,9 +42,10 @@
   --clr-surface: #f5e6c8;
   --clr-surface-alt: #e8d9b8;
   --clr-card: #fff0d4;
-  --clr-card-border: rgba(0, 0, 0, 0.25);
-  --clr-card-border-hover: rgba(0, 0, 0, 0.5);
-  --clr-border-faint: rgba(0, 0, 0, 0.1);
+  --clr-card-border: rgba(0, 0, 0, 0.6);
+  --clr-card-border-hover: rgba(0, 0, 0, 0.8);
+  --clr-border-faint: rgba(0, 0, 0, 0.25);
+  --clr-card-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   --clr-heading: #3d3020;
   --clr-text: #5a4a32;
   --clr-text-secondary: #8a7a62;
