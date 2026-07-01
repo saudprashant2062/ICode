@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
+
 const inputClass = "w-full bg-gray-800 border border-green-500/25 px-4 py-3.5 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-green-400 focus:ring-1 focus:ring-green-400";
 
 export default function Login() {
